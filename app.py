@@ -145,4 +145,8 @@ def savepoint2():
     return render_template('delete_page.html', delete_id=delete_id)
 
 
+#  improve login system
+#  blueprint
+
+
 app.run(debug=True)

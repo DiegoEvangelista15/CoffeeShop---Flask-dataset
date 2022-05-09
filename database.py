@@ -45,7 +45,6 @@ class DataBase:
             preco = lista['price']
             return preco
 
-
     def update_db(self, nome, qtd, prc):
         with dataset.connect('sqlite:///cafeteria.db') as db:
             lista = db['cafe'].find_one(name=nome)
