@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/cafe.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <title>Admin</title>
+</head>
+<body>
+
+<div class="masthead" style="background-image: url('/static/images/img1.jpg');"><br>
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        <h2>Admin</h2> <img src="/static/images/coffee-machine.png" alt="" class="img">
+
+    </div>
+    <form action="{{url_for('listing')}}" method="get">
+        <div class="tabela">Listar</div>
+        <input type="submit" value="listar todos os produtos e quantidades">
+    </form>
+    <br>
+    <div class="tabela">Adicionar</div>
+    <form action="{{url_for('add')}}" method="post">
+        <p>Item</p>
+        <input type="text" name="item">
+        <p>Quantidade</p>
+        <input type="text" name="quantidade">
+        <p>Preco</p>
+        <input type="text" name="preco"><br><br>
+        <input type="submit" value="Adicionar item">
+    </form>
+    <br>
+    <div class="tabela">Alterar</div>
+    <form action="{{url_for('update')}}" method="post">
+        <p>Item</p>
+        <input type="text" name="item">
+        <p>Quantidade</p>
+        <input type="text" name="quantidade">
+        <p>Preco</p>
+        <input type="text" name="preco"><br><br>
+        <input type="submit" value="Alterar item">
+    </form>
+    <br>
+    <div class="tabela">Deletar</div>
+    <form action="{{url_for('delete')}}" method="post">
+        <p>ID do item</p>
+        <input type="text" name="id">
+        <br><br>
+        <input type="submit" value="Deletar item">
+        <br><br><br>
+    </form>
+    <br><br>
+    <h3><a href="{{url_for('home')}}" class="link">Voltar</a></h3>
+
+
+</div>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

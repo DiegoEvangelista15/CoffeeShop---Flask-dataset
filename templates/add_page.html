@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content%}
+<div class="masthead" style="background-image: url('/static/images/img1.jpg');"><br>
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        <h3>{{item_bd}} foi adicionado com sucesso!</h3>
+    </div>
+    <br>
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        <h3><a href="{{url_for('home')}}" class="link">Main Page</a></h3>
+    </div>
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        <h3><a href="{{url_for('listing')}}" class="link">Listar Itens</a></h3>
+    </div>
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        <h3><a href="{{url_for('admin')}}" class="link">Admin page</a></h3>
+    </div>
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        <img src="/static/images/coffee-cup.png" alt="" class="img">
+    </div>
+</div>
+{% endblock %}
